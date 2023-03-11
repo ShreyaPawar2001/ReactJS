@@ -1,13 +1,14 @@
+import ExpenseDate from './ExpenseDate';
 import './Expenseltem.css';
 
-function Expenseltem(props) {
-  // const expenseDate =new Date(2016,5,13);
-  // const expenseTitle ='Food';
-  // const expenseAmount =10;
-  // const expenseLocation =pune;
+
+function Expenseltem(props) { // props are used for passinf data from a to b file.
+  
+  
   return (
     <div className='expense-item'>
-      <div>{props.date.toISOString()}</div>
+      <ExpenseDate date={props.date}/>
+  
       <div className='expense-item__description'>
         <h2 >{props.title}</h2>
         <div className='expense-item__description'>{props.location}</div>
