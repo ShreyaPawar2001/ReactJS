@@ -1,15 +1,20 @@
-function Expenseltem() {
-    return (
-      <div>
-        <div><h2>Expenseltem</h2></div>
-        <div>Food Rs 10</div>
-        <div>Petrol Rs 100</div>
-        <div>Movies Rs 200</div>
-        <div>
-          <h2>Done</h2>
-        </div>
+import './Expenseltem.css';
+
+function Expenseltem(props) {
+  // const expenseDate =new Date(2016,5,13);
+  // const expenseTitle ='Food';
+  // const expenseAmount =10;
+  // const expenseLocation =pune;
+  return (
+    <div className='expense-item'>
+      <div>{props.date.toISOString()}</div>
+      <div className='expense-item__description'>
+        <h2 >{props.title}</h2>
+        <div className='expense-item__description'>{props.location}</div>
+        <div className='expense-item__price'>${props.amount}</div>
         
       </div>
-    );
-  }
-  export default Expenseltem;
+    </div>
+  );
+}
+export default Expenseltem;
